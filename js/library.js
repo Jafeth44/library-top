@@ -26,11 +26,14 @@ function addBookToLibrary(event) {
 	let author = document.getElementById("author").value;
 	let pages = document.getElementById("pages").value;
 	let tmpBook = new Book(title, author, pages);
-	if (title != "" || author != "" || pages != "") {
+	if (title != "" && author != "" && pages != "") {
 		myLibrary.push(tmpBook);
 		document.getElementById("title").value = "";
 		document.getElementById("author").value = "";
 		document.getElementById("pages").value = "";
 		toggleBookForm(event);
+		bookGrid(myLibrary);
+	} else {
+		alert("please fill the required informatión");
 	}
 }
