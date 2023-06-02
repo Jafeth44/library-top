@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+body {
+    background-color: rgb(40, 34, 70);
+}
+
+nav {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: aliceblue;
+    background-color: rgba(107, 138, 162, 0.351);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.576);
+    backdrop-filter: blur(15px);
+}
+
+form {
+    display: none;
+    -webkit-animation: fadeOut 1s;
+    animation: fadeOut 1s;
+}
+
+form.visible {
+    padding: 20px;
+    font-size: 2rem;
+    color: aliceblue;
+    background-color: rgba(54, 59, 63, 0.351);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.576);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+}
+
+form input {
+    font-size: 2rem;
+}
+
+form>* {
+    margin: 10px;
+}
+
+#submit-button {
+    font-size: 2rem;
+    color: aliceblue;
+    background-color: rgba(107, 138, 162, 0.351);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.576);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    border: none;
+    padding: 15px;
+}
+
+#new-book {
+    font-size: 2rem;
+    color: aliceblue;
+    background-color: rgba(107, 138, 162, 0.351);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.576);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 15px;
+    position: absolute;
+    bottom: 10px;
+    border-radius: 15px;
+    border: none;
+    right: 10px;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
