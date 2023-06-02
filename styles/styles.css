@@ -10,7 +10,7 @@ body {
 }
 
 nav {
-    height: 50px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,10 +76,25 @@ form>* {
     -webkit-backdrop-filter: blur(15px);
     padding: 15px;
     position: absolute;
-    bottom: 10px;
-    border-radius: 15px;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
     border: none;
-    right: 10px;
+    transition: ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+#new-book:hover {
+    background-color: rgba(156, 199, 234, 0.351);
+    transition: ease-in-out 0.3s;
+    transform: scale(1.1);
+}
+
+#new-book:active {
+    background-color: rgba(78, 98, 114, 0.351);
+    transform: scale(0.9);
 }
 
 @-webkit-keyframes fadeIn {
