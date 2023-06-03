@@ -8,13 +8,11 @@ class Book {
 		this.pages = pages;
 		this.read = read;
 		this.info = function () {
-			let readed = "";
 			if (read) {
-				readed = "already readed";
+				return "already readed";
 			} else {
-				readed = "not read yet";
+				return "not read yet";
 			}
-			return `${title} by ${author}, ${pages} pages, ${readed}`;
 		};
 	}
 }
@@ -25,7 +23,8 @@ function addBookToLibrary(event) {
 	let title = document.getElementById("title").value;
 	let author = document.getElementById("author").value;
 	let pages = document.getElementById("pages").value;
-	let tmpBook = new Book(title, author, pages);
+	let readed = document.getElementById("readed").checked;
+	let tmpBook = new Book(title, author, pages, readed);
 	if (title != "" && author != "" && pages != "") {
 		myLibrary.push(tmpBook);
 		document.getElementById("title").value = "";
